@@ -5,9 +5,6 @@ function requestBackend(isOk) {
     return {status: 400, body: "오류데이터응답!"}
 }
 
-
-
-
 const p1 = new Promise((resolve, reject) => {
     console.log("p1 프로미스 생성");
     const { status, body } = requestBackend(true);
@@ -29,10 +26,6 @@ p1.then(responsBody => {
 }).catch(error => {
     console.log("p1:", error);
 });
-
-
-
-
 
 const p2 = new Promise((resolve, reject) => {
     console.log("p2 프로미스 생성");
